@@ -3,15 +3,15 @@
 
 class post
 {
+    private string $datePost = "";
     private string $title = "";
-    private string $date = "";
     private string $content = "";
     private string $author_name = "";
 
     public function __construct($title, $content, $author_name)
     {
+        $this->datePost = date('l jS \of F Y h:i A');
         $this->title = $title;
-        $this->date = Date('Y-m-d H:i:s');
         $this->content = $content;
         $this->author_name = $author_name;
     }
@@ -19,6 +19,7 @@ class post
     public function __serialize(): array
     {
         return [
+            //'date' => $this->datePost,
             'title' => $this->title,
             'content' => $this->content,
             'author_name' => $this->author_name,
@@ -27,6 +28,7 @@ class post
 
     public function __unserialize(array $data): void
     {
+        //$this->datePost = $data['date'];
         $this->title = $data['title'];
         $this->content = $data['content'];
         $this->author_name = $data['author_name'];
@@ -53,20 +55,21 @@ class post
     }
 
     /**
-     * @return string
+     * @return false|string
      */
-    public function getDate(): string
+    public function getDatePost(): bool|string
     {
-        return $this->date;
+        return $this->datePost;
     }
 
     /**
-     * @param string $date
+     * @param false|string $datePost
      */
-    public function setDate(string $date): void
+    public function setDatePost(bool|string $datePost): void
     {
-        $this->date = $date;
+        $this->datePost = $datePost;
     }
+
 
     /**
      * @return string

@@ -1,0 +1,43 @@
+.input_field{
+    text-align: center;
+    border: 2px solid black;
+    width: 650px;
+    height: 700px;
+    margin: auto;
+}
+
+.title_field{
+    padding: 35px;
+    display: block;
+    margin: auto;
+}
+
+.author_field{
+    padding: 35px;
+    display: block;
+    margin: auto;
+}
+
+.content_field{
+    padding: 35px;
+    display: block;
+    margin: auto;
+}
+
+.userText{
+    padding: 35px;
+    width: 350px;
+    height: 150px;
+}
+
+.submit_button{
+    padding-top: 25px;
+    display: block;
+    margin: auto;
+}
+
+.display{
+    border: 2px solid black;
+    text-align: center;
+    margin: 10px;
+}
