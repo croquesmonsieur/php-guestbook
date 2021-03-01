@@ -3,14 +3,15 @@
 
 class post
 {
-    private string $datePost = "";
-    private string $title = "";
-    private string $content = "";
-    private string $author_name = "";
+    private string $datePost;
+    private string $title;
+    private string $content;
+    private string $author_name;
 
     public function __construct($title, $content, $author_name)
     {
         $this->datePost = date('l jS \of F Y h:i A');
+        var_dump($this->datePost);
         $this->title = $title;
         $this->content = $content;
         $this->author_name = $author_name;
